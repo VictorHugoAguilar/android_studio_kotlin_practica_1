@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_min">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">31dp</dimen>
+    <dimen name="ancho_zero">0dp</dimen>
+    <dimen name="text_central_large">96sp</dimen>
+    <dimen name="text_description_large">34sp</dimen>
+    <dimen name="anch_eval">38dp</dimen>
+    <dimen name="heigth_normal">48dp</dimen>
+    <dimen name="textview_name_width">51dp</dimen>
+    <dimen name="textview_name_margin_top">85dp</dimen>
+    <dimen name="textview_date_width">41dp</dimen>
+    <dimen name="textview_date_margin_top">30dp</dimen>
+    <dimen name="textview_description_width">228dp</dimen>
+    <dimen name="textview_description_height">41dp</dimen>
+    <dimen name="textview_description_margin_start">176dp</dimen>
+    <dimen name="textview_description_margin_end">177dp</dimen>
+</resources>

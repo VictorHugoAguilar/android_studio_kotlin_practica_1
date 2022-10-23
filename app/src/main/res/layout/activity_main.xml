@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginTop="@dimen/margin_min"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbn_presencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/presencial" />
+
+        <RadioButton
+            android:id="@+id/rbn_semipresencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/semipresencial" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/input_nombre"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/indroduzca_el_nombre_del_alumno"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lbl_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lbl_nombre"
+        android:layout_width="@dimen/textview_name_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/textview_name_margin_top"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:text="@string/nombre"
+        app:layout_constraintEnd_toStartOf="@+id/input_nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_dia_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/d_a"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toStartOf="@+id/input_mes_fecha"
+        app:layout_constraintStart_toEndOf="@+id/lbl_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lbl_fecha"
+        android:layout_width="@dimen/textview_date_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/textview_date_margin_top"
+        android:text="@string/fecha"
+        app:layout_constraintEnd_toStartOf="@+id/input_dia_fecha"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_nombre" />
+
+    <EditText
+        android:id="@+id/input_mes_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/mes"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toStartOf="@+id/input_anio_fecha"
+        app:layout_constraintStart_toEndOf="@+id/input_dia_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/input_anio_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/a_o"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_mes_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/input_eval_3"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_3"
+        app:layout_constraintTop_toBottomOf="@+id/input_anio_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/input_eval_2"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_eval_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_2"
+        app:layout_constraintTop_toBottomOf="@+id/input_mes_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/lbl_eval_1"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/anch_eval"
+        android:text="@string/eval1"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_fecha" />
+
+    <EditText
+        android:id="@+id/input_eval_1"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_eval_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_1"
+        app:layout_constraintTop_toBottomOf="@+id/input_dia_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/lbl_eval_2"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/eval2"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input_eval_1"
+        app:layout_constraintTop_toBottomOf="@+id/input_dia_fecha" />
+
+    <TextView
+        android:id="@+id/lbl_eval_3"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/eval3"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input_eval_2"
+        app:layout_constraintTop_toBottomOf="@+id/input_mes_fecha" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_eval_2" />
+
+    <TextView
+        android:id="@+id/lbl_result_descripcion"
+        android:layout_width="@dimen/textview_description_width"
+        android:layout_height="@dimen/textview_description_height"
+        android:layout_marginStart="@dimen/textview_description_margin_start"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/textview_description_margin_end"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_description_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_result_number" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grup_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="input_dia_fecha,lbl_fecha,input_mes_fecha,input_anio_fecha" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="input_nombre,lbl_nombre" />
+
+    <FrameLayout
+        android:id="@+id/fl_result_number"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="@dimen/ancho_zero"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:background="@color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_result_descripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_central_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
